@@ -35,7 +35,6 @@
             this.LblMsgRecebida = new System.Windows.Forms.Label();
             this.LblIpConectado = new System.Windows.Forms.Label();
             this.GbxEscolhaExercicio = new System.Windows.Forms.GroupBox();
-            this.RbQuestao9 = new System.Windows.Forms.RadioButton();
             this.RbQuestao8 = new System.Windows.Forms.RadioButton();
             this.RbQuestao7 = new System.Windows.Forms.RadioButton();
             this.RbQuestao6 = new System.Windows.Forms.RadioButton();
@@ -111,7 +110,6 @@
             // 
             // GbxEscolhaExercicio
             // 
-            this.GbxEscolhaExercicio.Controls.Add(this.RbQuestao9);
             this.GbxEscolhaExercicio.Controls.Add(this.RbQuestao8);
             this.GbxEscolhaExercicio.Controls.Add(this.RbQuestao7);
             this.GbxEscolhaExercicio.Controls.Add(this.RbQuestao6);
@@ -127,17 +125,6 @@
             this.GbxEscolhaExercicio.TabIndex = 6;
             this.GbxEscolhaExercicio.TabStop = false;
             this.GbxEscolhaExercicio.Text = "Escolha o Exercicio";
-            // 
-            // RbQuestao9
-            // 
-            this.RbQuestao9.AutoSize = true;
-            this.RbQuestao9.Location = new System.Drawing.Point(250, 96);
-            this.RbQuestao9.Name = "RbQuestao9";
-            this.RbQuestao9.Size = new System.Drawing.Size(91, 23);
-            this.RbQuestao9.TabIndex = 8;
-            this.RbQuestao9.TabStop = true;
-            this.RbQuestao9.Text = "Questão 9";
-            this.RbQuestao9.UseVisualStyleBackColor = true;
             // 
             // RbQuestao8
             // 
@@ -264,7 +251,6 @@
         private Label lblPorta;
         private GroupBox groupBox1;
         private GroupBox GbxEscolhaExercicio;
-        private RadioButton RbQuestao9;
         private RadioButton RbQuestao8;
         private RadioButton RbQuestao7;
         private RadioButton RbQuestao6;

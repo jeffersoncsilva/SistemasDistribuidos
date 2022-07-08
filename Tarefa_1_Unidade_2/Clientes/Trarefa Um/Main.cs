@@ -61,11 +61,5 @@ namespace Trarefa_Um
             var q8 = new FrmQuestao8(txbIpServidor.Text, txbPortaServidor.Text);
             q8.Show();
         }
-
-        private void BtnQuestao9_Click(object sender, EventArgs e)
-        {
-            var q8 = new FrmQuestao9(txbIpServidor.Text, txbPortaServidor.Text);
-            q8.Show();
-        }
     }
 }

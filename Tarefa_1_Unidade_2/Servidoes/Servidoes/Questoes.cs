@@ -146,7 +146,21 @@
         
         private static string Questao08(string msg)
         {
-            return "";
+            if(!string.IsNullOrWhiteSpace(msg) && Double.TryParse(msg, out double res))
+            {
+                double cred = 0;
+                if (res > 0 && res <= 200)
+                    return "Não tem saudo de credito.";
+                else if (res > 200 && res <= 400)
+                    cred = res * 0.2;
+                else if (res > 400 && res <= 600)
+                    cred = res * 0.3;
+                else if (res > 600)
+                    cred = res * 0.4;
+
+                return $"A media de saldo e: R$ {res} e o credito disponivel e de: R${cred}";
+            }
+            return "Dados não recebidos. Tente novamente.";
         }
         private static string Questao09(string msg)
         {

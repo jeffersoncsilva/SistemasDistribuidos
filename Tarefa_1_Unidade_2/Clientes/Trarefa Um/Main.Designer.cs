@@ -38,7 +38,6 @@
             this.BtnQuestao8 = new System.Windows.Forms.Button();
             this.BtnQuest5 = new System.Windows.Forms.Button();
             this.btnQuestao5 = new System.Windows.Forms.Button();
-            this.BtnQuestao9 = new System.Windows.Forms.Button();
             this.btnQuestao3 = new System.Windows.Forms.Button();
             this.BtnQuestao7 = new System.Windows.Forms.Button();
             this.BtnQuestao4 = new System.Windows.Forms.Button();
@@ -66,7 +65,6 @@
             this.groupBox1.Controls.Add(this.BtnQuestao8);
             this.groupBox1.Controls.Add(this.BtnQuest5);
             this.groupBox1.Controls.Add(this.btnQuestao5);
-            this.groupBox1.Controls.Add(this.BtnQuestao9);
             this.groupBox1.Controls.Add(this.btnQuestao3);
             this.groupBox1.Controls.Add(this.BtnQuestao7);
             this.groupBox1.Controls.Add(this.BtnQuestao4);
@@ -159,18 +157,6 @@
             this.btnQuestao5.UseVisualStyleBackColor = true;
             this.btnQuestao5.Click += new System.EventHandler(this.btnQuestao5_Click);
             // 
-            // BtnQuestao9
-            // 
-            this.BtnQuestao9.Enabled = false;
-            this.BtnQuestao9.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BtnQuestao9.Location = new System.Drawing.Point(306, 150);
-            this.BtnQuestao9.Name = "BtnQuestao9";
-            this.BtnQuestao9.Size = new System.Drawing.Size(120, 37);
-            this.BtnQuestao9.TabIndex = 4;
-            this.BtnQuestao9.Text = "Questão 09";
-            this.BtnQuestao9.UseVisualStyleBackColor = true;
-            this.BtnQuestao9.Click += new System.EventHandler(this.BtnQuestao9_Click);
-            // 
             // btnQuestao3
             // 
             this.btnQuestao3.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -226,7 +212,6 @@
         private Button BtnQuestao8;
         private Button BtnQuest5;
         private Button btnQuestao5;
-        private Button BtnQuestao9;
         private Button btnQuestao3;
         private Button BtnQuestao7;
         private Button BtnQuestao4;

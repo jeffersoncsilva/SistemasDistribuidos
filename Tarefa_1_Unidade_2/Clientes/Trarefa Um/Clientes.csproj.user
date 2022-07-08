@@ -22,9 +22,6 @@
     <Compile Update="FormsClientes\FrmQuestao8.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="FormsClientes\FrmQuestao9.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Main.cs">
       <SubType>Form</SubType>
     </Compile>
