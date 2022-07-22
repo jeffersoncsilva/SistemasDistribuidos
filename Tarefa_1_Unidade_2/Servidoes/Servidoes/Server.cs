@@ -36,11 +36,7 @@ namespace Servidoes
         
         public string LeDados()
         {
-            string dados = "";
-            byte[] bytes = new byte[1024];
-            int lidos = this.client.Receive(bytes);
-            dados = Encoding.UTF8.GetString(bytes);
-            return dados;
+            return reader.ReadLine();
         }
 
         public void EnviaResposta(string msg)

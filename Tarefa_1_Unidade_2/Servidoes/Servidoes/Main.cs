@@ -6,8 +6,8 @@ namespace Servidoes
 {
     public partial class Main : Form
     {
-        private Server server;
-
+        private Server? server;
+      
         public Main()
         {
             InitializeComponent();
@@ -29,24 +29,30 @@ namespace Servidoes
 
         private void BtEscuta_Click(object sender, EventArgs e)
         {
-            AlteraEstadoBotoes(false);
+            BtnIniciaServidor.Enabled = false;
+            AtivarServidor();
+            BtnIniciaServidor.Enabled = true;
+        }
+
+        private void AtivarServidor()
+        {
             server = new Server();
-            var exercicioSelecionado = GbxEscolhaExercicio.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).TabIndex;
             var conectado = server.EsperaPorConexao();
             LblIpConectado.Text = conectado;
-            var msgLida = server.LeDados();
-            LblMsgRecebida.Text = msgLida;
-            var msgEnviada = Questoes.TratarQuestao(exercicioSelecionado, msgLida);
+            var msg = server.LeDados();
+            LblMsgRecebida.Text = msg;
+            var msgEnviada = Questoes.TratarQuestao(msg);
             LblMsgEnviada.Text = msgEnviada;
+            msgEnviada += '\n';
             server.EnviaResposta(msgEnviada);
             server.EncerraConexao();
-            AlteraEstadoBotoes(true);
         }
 
         private void AlteraEstadoBotoes(bool f)
         {
-            GbxEscolhaExercicio.Enabled = f;
-            BtEscuta.Enabled = f;
+            //GbxEscolhaExercicio.Enabled = f;
+            BtnIniciaServidor.Enabled = f;
         }
+
     }
 }

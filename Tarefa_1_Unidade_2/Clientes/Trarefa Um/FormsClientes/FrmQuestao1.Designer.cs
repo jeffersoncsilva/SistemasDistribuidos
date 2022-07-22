@@ -1,6 +1,6 @@
 ﻿namespace Trarefa_Um
 {
-    partial class FrmQuestao01
+    partial class FrmQuestao1
     {
         /// <summary>
         /// Required designer variable.

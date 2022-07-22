@@ -22,7 +22,7 @@ namespace Trarefa_Um.FormsClientes
                 string idade = TxbIdade.Text;
                 string tempo = TxbTempo.Text;
                 var c = new Client(this.ip, this.porta);
-                var res = c.EnviaDadosServidor(Padroes.GeraMensagem(new object[] { idade, tempo }));
+                var res = c.EnviaDadosServidor(Padroes.GeraMensagem(new object[] { 7, idade, tempo }));
                 MessageBox.Show(res);
                 c.EncerraConexao();
                 BtnVerificar.Enabled = true;

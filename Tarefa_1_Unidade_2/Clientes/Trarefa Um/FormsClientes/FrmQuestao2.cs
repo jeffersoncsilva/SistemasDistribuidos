@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Trarefa_Um.Clientes;
-
-namespace Trarefa_Um.FormsClientes
+﻿namespace Trarefa_Um.FormsClientes
 {
     public partial class FrmQuestao2 : Form
     {
@@ -36,8 +25,8 @@ namespace Trarefa_Um.FormsClientes
             else if (rdbMasculino.Checked)
                 sexo = 0;
             var idade = int.Parse(txbIdade.Text);
-            var cliente = new ClienteQuestao02(ip, porta, nome, sexo, idade);
-            var resultado = cliente.EnviaDadosServidor();
+            var cliente = new Client(ip, porta);
+            var resultado = cliente.EnviaDadosServidor(Padroes.GeraMensagem(new object[] {2, nome, sexo, idade}));
             MessageBox.Show(resultado);
             cliente.EncerraConexao();
         }

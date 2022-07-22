@@ -10,13 +10,14 @@ namespace Trarefa_Um
     {
         public const int PORTA_PADRAO = 12345;
         public const string IP_PADRAO = "127.0.0.1";
-        public const string PADRAO_SEPARADOR = "_$_";
+        public const char PADRAO_SEPARADOR = '$';
 
         public static string GeraMensagem(object[] objs)
         {
             string str = "";
             for (int i = 0; i < objs.Length; i++)
-                str += $"{objs[i]}{PADRAO_SEPARADOR}";
+                str += $"{PADRAO_SEPARADOR}{objs[i]}";
+            str += '\n';
             return str;
         }
 

@@ -16,7 +16,7 @@ namespace Trarefa_Um
         {
             string ip = txbIpServidor.Text;
             string porta = txbPortaServidor.Text;
-            Form questao01 = new FrmQuestao01(ip, porta);
+            Form questao01 = new FrmQuestao1(ip, porta);
             questao01.Show();
         }
 
@@ -40,7 +40,7 @@ namespace Trarefa_Um
 
         private void BtnQuest5_Click(object sender, EventArgs e)
         {
-            var ft = new FrmQuestao05(txbIpServidor.Text, txbPortaServidor.Text);
+            var ft = new FrmQuestao5(txbIpServidor.Text, txbPortaServidor.Text);
             ft.Show();
         }
 

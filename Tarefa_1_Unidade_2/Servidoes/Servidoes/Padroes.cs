@@ -10,7 +10,7 @@ namespace Servidoes
     {
         public const int PORTA_PADRAO = 12345;
         public const string IP_PADRAO = "127.0.0.1";
-        public const string PADRAO_SEPARADOR = "_$_";
+        public const char PADRAO_SEPARADOR = '$';
 
 
         public static void FormataFormsIniciais(Form f, String nomeForm)
@@ -30,11 +30,15 @@ namespace Servidoes
         {
             string str = "";
             for (int i = 0; i < objs.Length; i++)
-                str += $"{objs[i]}{PADRAO_SEPARADOR}";
+                str += $"{PADRAO_SEPARADOR}{objs[i]}";
             return str;
         }
 
-        public static string[] DivideMensagem(string msg) => msg.Split(PADRAO_SEPARADOR);
+        public static string[] DivideMensagem(string msg) {
+            var sep = msg.Substring(0, 1);
+            msg = msg.Substring(3);
+            return msg.Split(sep);
+        }
 
     }
 }

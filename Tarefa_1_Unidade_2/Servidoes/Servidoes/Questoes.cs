@@ -2,41 +2,49 @@
 {
     public static class Questoes
     {
-        public static string TratarQuestao(int questao, string msg)
+        public static string TratarQuestao(string msg)
         {
-            switch (questao)
+            var op = msg.Substring(1, 1);
+            if (int.TryParse(op, out int questao))
             {
-                case 0:
-                    return Questao01(msg);
-                case 1:
-                    return Questao02(msg);
-                case 2:
-                    return Questao03(msg);
-                case 3:
-                    return Questao04(msg);
-                case 4:
-                    return Questao05(msg);
-                case 5:
-                    return Questao06(msg);
-                case 6:
-                    return Questao07(msg);
-                case 7:
-                    return Questao08(msg);
-                case 8:
-                    return Questao09(msg);
-                default:
-                    return "Opção nao encontrada!";
+                switch (questao)
+                {
+                    case 1:
+                        return Questao01(msg);
+                    case 2:
+                        return Questao02(msg);
+                    case 3:
+                        return Questao03(msg);
+                    case 4:
+                        return Questao04(msg);
+                    case 5:
+                        return Questao05(msg);
+                    case 6:
+                        return Questao06(msg);
+                    case 7:
+                        return Questao07(msg);
+                    case 8:
+                        return Questao08(msg);
+                    case 9:
+                        return Questao09(msg);
+                    default:
+                        return "Opção nao encontrada!";
 
+                }
+            }
+            else
+            {
+                return "Ocorreu um erro ao tratar mensagem.";
             }
         }
 
         private static string Questao01(string ms)
         {
-            string[] msg = ms.Split(Padroes.PADRAO_SEPARADOR);
+            string[] msg = Padroes.DivideMensagem(ms);
             double salario = double.Parse(msg[2]);
             int cargo = int.Parse(msg[1]);
-            msg[2] = $"{CalculaSalarioReajustado(salario, cargo)}";
-            return Padroes.GeraMensagem(msg);
+            var sal = CalculaSalarioReajustado(salario, cargo);
+            return $"Nome: {msg[0]} - Novo salario: {sal}";
         }
         
         private static double CalculaSalarioReajustado(double salario, int cargo) => (cargo == 0) ? salario * 1.2 : salario * 1.18;
@@ -90,19 +98,22 @@
 
         private static string Questao05(string msg)
         {
-            int idade = int.Parse(msg);
-            if (idade < 5)
-                return "Muito novo para possuir categoria.";
-            else if (idade >= 5 && idade <= 7)
-                return "Categoria infantil A";
-            else if (idade >= 8 && idade <= 10)
-                return "Categoria infantil B";
-            else if (idade >= 11 && idade <= 13)
-                return "Categoria juvenil A";
-            else if (idade >= 14 && idade <= 17)
-                return "Categoria juvenil B";
-            else if (idade >= 18)
-                return "Categoria Adulto";
+            var s = Padroes.DivideMensagem(msg);
+            if (int.TryParse(s[0], out int idade))
+            {
+                if (idade < 5)
+                    return "Muito novo para possuir categoria.";
+                else if (idade >= 5 && idade <= 7)
+                    return "Categoria infantil A";
+                else if (idade >= 8 && idade <= 10)
+                    return "Categoria infantil B";
+                else if (idade >= 11 && idade <= 13)
+                    return "Categoria juvenil A";
+                else if (idade >= 14 && idade <= 17)
+                    return "Categoria juvenil B";
+                else if (idade >= 18)
+                    return "Categoria Adulto";
+            }
             return "";
         }
         
@@ -146,7 +157,8 @@
         
         private static string Questao08(string msg)
         {
-            if(!string.IsNullOrWhiteSpace(msg) && Double.TryParse(msg, out double res))
+            var r = Padroes.DivideMensagem(msg);
+            if (!string.IsNullOrWhiteSpace(r[0]) && Double.TryParse(r[0], out double res))
             {
                 double cred = 0;
                 if (res > 0 && res <= 200)
@@ -162,8 +174,10 @@
             }
             return "Dados não recebidos. Tente novamente.";
         }
+        
         private static string Questao09(string msg)
         {
+            var mens = Padroes.DivideMensagem(msg);
             return "";
         }
     }

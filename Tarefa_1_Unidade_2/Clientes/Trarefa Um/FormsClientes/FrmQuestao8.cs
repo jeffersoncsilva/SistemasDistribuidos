@@ -25,7 +25,7 @@ namespace Trarefa_Um.FormsClientes
             else
             {
                 var d = textBox1.Text;
-                var res = c.EnviaDadosServidor(d);
+                var res = c.EnviaDadosServidor(Padroes.GeraMensagem(new object[] { 8, d }));
                 MessageBox.Show(res);
                 c.EncerraConexao();
             }

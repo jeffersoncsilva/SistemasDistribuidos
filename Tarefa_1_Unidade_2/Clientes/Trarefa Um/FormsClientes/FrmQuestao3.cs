@@ -20,7 +20,7 @@
         {
             btnEnviar.Enabled = false;
             var client = new Client(this.ip, this.porta);
-            var resultado = client.EnviaDadosServidor(Padroes.GeraMensagem(new object[] {txbNota1.Text, txbNota2.Text, txbNota3.Text}));
+            var resultado = client.EnviaDadosServidor(Padroes.GeraMensagem(new object[] {3, txbNota1.Text, txbNota2.Text, txbNota3.Text}));
             MessageBox.Show(resultado);
             client.EncerraConexao();
             btnEnviar.Enabled = true;

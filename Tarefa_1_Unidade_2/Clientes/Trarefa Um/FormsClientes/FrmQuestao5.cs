@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Trarefa_Um.FormsClientes
 {
-    public partial class FrmQuestao05 : Form
+    public partial class FrmQuestao5 : Form
     {
         private string ip, porta;
         private Client c;
@@ -22,7 +22,7 @@ namespace Trarefa_Um.FormsClientes
             var msg = TxbIdade.Text;
             if (string.IsNullOrWhiteSpace(msg) && double.TryParse(msg, out double res) && res >= 0)
                 throw new DadosInvalidosException("Idade errada inserida.");
-            var result = c.EnviaDadosServidor(msg);
+            var result = c.EnviaDadosServidor(Padroes.GeraMensagem(new object[] { 5, msg }));
             MessageBox.Show(result);
             TxbIdade.Text = "";
             BtnValidar.Enabled = true;
@@ -34,7 +34,7 @@ namespace Trarefa_Um.FormsClientes
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
 
-        public FrmQuestao05(string ip, string porta)
+        public FrmQuestao5(string ip, string porta)
         {
             InitializeComponent();
             this.ip = ip;

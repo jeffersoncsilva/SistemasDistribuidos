@@ -36,7 +36,7 @@ namespace Trarefa_Um
             {
                 IPEndPoint ipendpoint = new IPEndPoint(ipAdress, this.porta);
                 socket.Connect(ipendpoint);
-
+              
                 stream = new NetworkStream(socket);
                 writer = new StreamWriter(stream);
                 reader = new StreamReader(stream);
@@ -63,10 +63,11 @@ namespace Trarefa_Um
 
             try
             {
-                byte[] bytes = new byte[1024];
-                int tamDadosRec = socket.Receive(bytes);
-                string str = Encoding.ASCII.GetString(bytes, 0, tamDadosRec);
-                return str;
+                //byte[] bytes = new byte[1024];
+                //int tamDadosRec = socket.Receive(bytes);
+                //string str = Encoding.ASCII.GetString(bytes, 0, tamDadosRec);
+                //return str;
+                return reader.ReadLine();
             }
             catch (SocketException ex)
             {

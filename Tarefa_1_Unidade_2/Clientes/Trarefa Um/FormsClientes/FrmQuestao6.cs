@@ -15,7 +15,7 @@
                 string nivel = GbNivel.Controls.OfType<RadioButton>().FirstOrDefault(r => r.Checked).Text;
 
                 var client = new Client(this.ip, this.porta);
-                string msg = Padroes.GeraMensagem(new object[] {nome, salario, dependentes, nivel });
+                string msg = Padroes.GeraMensagem(new object[] {6, nome, salario, dependentes, nivel });
                 var resp = client.EnviaDadosServidor(msg);
                 MessageBox.Show(resp);
                 BtnCalcular.Enabled = true;

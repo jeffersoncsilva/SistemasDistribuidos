@@ -31,7 +31,7 @@ namespace Trarefa_Um.FormsClientes
                 throw new DadosInvalidosException("Dados de sexo incorretos.");
             }
             altura = double.Parse(TxbNome.Text);
-            var res = this.client.EnviaDadosServidor(Padroes.GeraMensagem(new object[] { sexo, altura }));
+            var res = this.client.EnviaDadosServidor(Padroes.GeraMensagem(new object[] { 4, sexo, altura }));
             MessageBox.Show(res);
             this.client.EncerraConexao();
             BtnCalcula.Enabled = true;

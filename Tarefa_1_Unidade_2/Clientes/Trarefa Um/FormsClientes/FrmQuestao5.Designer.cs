@@ -1,6 +1,6 @@
 ﻿namespace Trarefa_Um.FormsClientes
 {
-    partial class FrmQuestao05
+    partial class FrmQuestao5
     {
         /// <summary>
         /// Required designer variable.

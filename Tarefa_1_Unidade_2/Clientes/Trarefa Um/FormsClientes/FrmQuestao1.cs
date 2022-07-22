@@ -1,20 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Trarefa_Um.Clientes;
-
+﻿
 namespace Trarefa_Um
 {
-    public partial class FrmQuestao01 : Form
+    public partial class FrmQuestao1 : Form
     {
         private string ip, porta;
-        public FrmQuestao01(string ip, string porta)
+        public FrmQuestao1(string ip, string porta)
         {
             this.ip = ip;
             this.porta = porta;
@@ -34,13 +24,14 @@ namespace Trarefa_Um
                 string nome = txbNome.Text;
                 int cargo = cmbCargo.SelectedIndex;
                 string salario = txbSalario.Text;
-                ClienteQuestao01 cl01 = new ClienteQuestao01(this.ip, this.porta, nome, cargo, salario);
-                string resultado = cl01.EnviaDadosServidor();
-                string[] res = resultado.Split("_$_");
+                Client cl01 = new Client(this.ip, this.porta);
+                string resultado = cl01.EnviaDadosServidor(Padroes.GeraMensagem(new object[] {1, nome, cargo, salario }));
+                MessageBox.Show(resultado);
+                /*string[] res = resultado.Split("_$_");
                 if (res.Length > 1)
                     MessageBox.Show($"Seu nome é {res[0]};\ntem o cargo de {res[1]}; \nSeu novo salário e de: R${res[2]}");
                 else
-                    MessageBox.Show("Erro ao enviar dados ao servidor.");
+                    MessageBox.Show("Erro ao enviar dados ao servidor.");*/
             }
             catch (DadosInvalidosException ex)
             {
