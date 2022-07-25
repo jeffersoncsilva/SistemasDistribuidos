@@ -82,7 +82,6 @@
             // 
             // txbPortaServidor
             // 
-            this.txbPortaServidor.Enabled = false;
             this.txbPortaServidor.Location = new System.Drawing.Point(341, 332);
             this.txbPortaServidor.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txbPortaServidor.Name = "txbPortaServidor";
@@ -108,7 +107,7 @@
             this.txbIpServidor.PlaceholderText = "127.0.0.1";
             this.txbIpServidor.Size = new System.Drawing.Size(258, 43);
             this.txbIpServidor.TabIndex = 10;
-            this.txbIpServidor.Text = "127.0.0.1";
+            this.txbIpServidor.Text = "192.168.15.85";
             // 
             // label1
             // 

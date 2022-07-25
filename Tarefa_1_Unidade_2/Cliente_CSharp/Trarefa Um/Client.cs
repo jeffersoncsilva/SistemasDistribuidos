@@ -60,13 +60,8 @@ namespace Trarefa_Um
             {
                 return $"Erro ao enviar dados ao servidor.\n{e.ToString()}";
             }
-
             try
             {
-                //byte[] bytes = new byte[1024];
-                //int tamDadosRec = socket.Receive(bytes);
-                //string str = Encoding.ASCII.GetString(bytes, 0, tamDadosRec);
-                //return str;
                 return reader.ReadLine();
             }
             catch (SocketException ex)
