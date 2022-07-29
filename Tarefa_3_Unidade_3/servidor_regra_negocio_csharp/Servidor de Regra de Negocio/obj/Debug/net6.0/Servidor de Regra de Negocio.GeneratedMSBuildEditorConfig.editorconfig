@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Servidor_de_Regra_de_Negocio
+build_property.ProjectDir = C:\Projetos\SistemasDistribuidos\Tarefa_3_Unidade_3\servidor_regra_negocio_csharp\Servidor de Regra de Negocio\

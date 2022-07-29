@@ -2,9 +2,14 @@ import java.io.*;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Random;
 
 public class Server {
     final static int PORTA = 12345;
+    private static List<Carta> cartas = null;
 
     public static void main(String[] args) {
         try {
@@ -49,6 +54,8 @@ public class Server {
                 return questaoSete(msg);
             case 8:
                 return questaoOito(msg);
+            case 9:
+                return questaoNove();
             default:
                 return "Exercicio não encontrado.";
         }
@@ -156,5 +163,38 @@ public class Server {
             cred = res * 0.4;
 
         return String.format("A media de saldo e: R$ %f e o credito disponivel e de: R$%f", res, cred);
+    }
+
+    private static String questaoNove(){
+        if(cartas == null)
+            criarBaralho();
+        Carta c = sorteiaCarta(cartas);
+        return c.toString();
+    }
+
+    private static Carta sorteiaCarta(List<Carta> c){
+        Random random = new Random();
+        int randomIndex = random.nextInt(c.size());
+        return c.get(randomIndex);
+    }
+
+    private static void criarBaralho(){
+        cartas = new ArrayList<Carta>();
+        criarCartas(cartas);
+        criarCartas(cartas);
+        Collections.shuffle(cartas);
+    }
+
+    private static void criarCartas(List<Carta> c){
+        String[] naipe = { "Copas", "Ouros","Espada", "Paus" };
+        String[] valor = { "Ás", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove", "Dez", "Valete", "Dama", "Rei" };
+        for(int n = 0; n <= 3; n++)
+        {
+            for(int j = 0; j <= 12; j++)
+            {
+                c.add(new Carta(valor[j], naipe[n]));
+            }
+
+        }
     }
 }
