@@ -29,7 +29,7 @@ namespace Trarefa_Um.FormsClientes
         {
             BtnPegarCarta.Enabled = false;
             client = new Client(this.ip, this.porta);
-            string? res = client.EnviaDadosServidor("$9\n");
+            string? res = client.EnviaDadosServidor("$9$\n");
             if(res != null)
                 AdicionaItemNaLista(res);
             BtnPegarCarta.Enabled = true;
