@@ -7,7 +7,7 @@ namespace Trarefa_Um
     internal class Client
     {
         private string nomeHost = "127.0.0.1";
-        private int porta = 40260;
+        private int porta = 12345;
 
         private Socket socket;
         private IPAddress ipAdress;
@@ -30,7 +30,7 @@ namespace Trarefa_Um
             this.socket = new Socket(this.ipAdress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
         }
 
-        private bool ConectaAoServidor()
+        public bool ConectaAoServidor()
         {
             try
             {
@@ -49,7 +49,7 @@ namespace Trarefa_Um
             return true;
         }
 
-        public String EnviaDadosServidor(string msg)
+        public string? EnviaDadosServidor(string msg)
         {
             try
             {

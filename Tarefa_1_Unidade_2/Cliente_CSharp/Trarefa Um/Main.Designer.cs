@@ -41,6 +41,7 @@
             this.btnQuestao3 = new System.Windows.Forms.Button();
             this.BtnQuestao7 = new System.Windows.Forms.Button();
             this.BtnQuestao4 = new System.Windows.Forms.Button();
+            this.BtnQuestao9 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +59,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.BtnQuestao9);
             this.groupBox1.Controls.Add(this.txbPortaServidor);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txbIpServidor);
@@ -202,6 +204,18 @@
             this.BtnQuestao4.UseVisualStyleBackColor = true;
             this.BtnQuestao4.Click += new System.EventHandler(this.BtnQuestao4_Click);
             // 
+            // BtnQuestao9
+            // 
+            this.BtnQuestao9.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BtnQuestao9.Location = new System.Drawing.Point(557, 200);
+            this.BtnQuestao9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BtnQuestao9.Name = "BtnQuestao9";
+            this.BtnQuestao9.Size = new System.Drawing.Size(247, 49);
+            this.BtnQuestao9.TabIndex = 13;
+            this.BtnQuestao9.Text = "Questão 09";
+            this.BtnQuestao9.UseVisualStyleBackColor = true;
+            this.BtnQuestao9.Click += new System.EventHandler(this.BtnQuestao9_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -232,5 +246,6 @@
         private Label label1;
         private TextBox txbPortaServidor;
         private Label label3;
+        private Button BtnQuestao9;
     }
 }

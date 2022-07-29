@@ -2,6 +2,8 @@
 {
     public static class Questoes
     {
+        private static List<Carta>? cartas = null;
+
         public static string TratarQuestao(string msg)
         {
             var op = msg.Substring(1, 1);
@@ -177,8 +179,35 @@
         
         private static string Questao09(string msg)
         {
-            var mens = Padroes.DivideMensagem(msg);
-            return "";
+            var rnd = new Random();
+            if (cartas == null)     
+                CriarBaralho(rnd);
+            
+            return cartas != null ? $"{cartas[rnd.Next(cartas.Count)].ToString()}\n" : "Baralho não foi criado pelo servidor.\n";
+        }
+
+        private static void CriarBaralho(Random rnd)
+        {
+            cartas = new List<Carta>();
+            // Cria 2 vezes para compor o baralho completo
+            CriarCartas(cartas);
+            CriarCartas(cartas);
+            // Embaralha as cartas            
+            var randomized = cartas.OrderBy(item => rnd.Next());
+        }
+
+        private static void CriarCartas(List<Carta> c)
+        {
+            string[] naipe = { "Copas", "Ouros","Espada", "Paus" };
+            string[] valor = { "Ás", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito", "Nove", "Dez", "Valete", "Dama", "Rei" };
+            for(int n = 0; n <= 3; n++)
+            {
+                for(int j = 0; j <= 12; j++)
+                {
+                    c.Add(new Carta(valor[j], naipe[n]));
+                }
+
+            }
         }
     }
 }

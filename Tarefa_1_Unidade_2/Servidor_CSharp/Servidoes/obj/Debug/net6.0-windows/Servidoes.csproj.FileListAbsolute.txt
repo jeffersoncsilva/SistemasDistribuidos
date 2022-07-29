@@ -1,0 +1,17 @@
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\bin\Debug\net6.0-windows\Servidoes.exe
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\bin\Debug\net6.0-windows\Servidoes.deps.json
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\bin\Debug\net6.0-windows\Servidoes.runtimeconfig.json
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\bin\Debug\net6.0-windows\Servidoes.dll
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\bin\Debug\net6.0-windows\Servidoes.pdb
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\obj\Debug\net6.0-windows\Servidoes.csproj.AssemblyReference.cache
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\obj\Debug\net6.0-windows\Servidoes.Main.resources
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\obj\Debug\net6.0-windows\Servidoes.csproj.GenerateResource.cache
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\obj\Debug\net6.0-windows\Servidoes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\obj\Debug\net6.0-windows\Servidoes.AssemblyInfoInputs.cache
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\obj\Debug\net6.0-windows\Servidoes.AssemblyInfo.cs
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\obj\Debug\net6.0-windows\Servidoes.csproj.CoreCompileInputs.cache
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\obj\Debug\net6.0-windows\Servidoes.dll
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\obj\Debug\net6.0-windows\refint\Servidoes.dll
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\obj\Debug\net6.0-windows\Servidoes.pdb
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\obj\Debug\net6.0-windows\Servidoes.genruntimeconfig.cache
+C:\Projetos\SistemasDistribuidos\Tarefa_1_Unidade_2\Servidor_CSharp\Servidoes\obj\Debug\net6.0-windows\ref\Servidoes.dll
