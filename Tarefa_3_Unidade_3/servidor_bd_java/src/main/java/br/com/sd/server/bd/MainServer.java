@@ -8,7 +8,7 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class MainServer {
-    final static int PORTA = 12345;
+    final static int PORTA = 12346;
 
     public static void main(String[] args){
         try {

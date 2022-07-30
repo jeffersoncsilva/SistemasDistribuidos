@@ -28,9 +28,9 @@ public class ServerConnection extends Thread{
             System.out.println(solicitacao);
             String resposta = tratarSolicitacao(solicitacao);
             writer.println(resposta);
-            writer.close();
+            /*writer.close();
             reader.close();
-            client.close();
+            client.close();*/
         }catch (IOException io){
             System.out.println("Erro ao ler os dados da requisição pelo socket.");
             System.out.println(io.toString());

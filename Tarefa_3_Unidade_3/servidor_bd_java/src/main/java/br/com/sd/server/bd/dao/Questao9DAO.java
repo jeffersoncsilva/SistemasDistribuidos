@@ -92,8 +92,10 @@ public class Questao9DAO implements IQuestaoDAO<Questao9> {
         AtomicReference<String> response = new AtomicReference<>("Não foi possivel econtrar nada com o ID especificado.");
         Optional<Questao9> q = findById(id);
         q.ifPresent(a -> {
+            List<Questao9> res = new ArrayList<>();
+            res.add(a);
             Gson g = new Gson();
-            response.set(g.toJson(a));
+            response.set(g.toJson(res));
         });
         return response.get();
     }

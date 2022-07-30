@@ -34,17 +34,28 @@ namespace Servidor_de_Regra_de_Negocio
         public string BuscarNoBancoDeDados(string busca)
         {
             string res = "";
+            if (!client_bd.Connected)
+                client_bd.Connect(new IPEndPoint(ip_bd_addres, porta_bd));
             try
             {
                 writer.WriteLine(busca);
                 writer.Flush();
-                res = reader.ReadLine();
-            }catch(SocketException se)
+                res = reader.ReadLine();               
+            }
+            catch (SocketException se)
             {
                 Console.WriteLine("Erro na comunicação com o servidor de dados.");
                 Console.WriteLine(se.ToString());
             }
+
             return res;
+        }
+
+        public void EncerraConexao()
+        {
+            writer.Close();
+            reader.Close();
+            client_bd.Close();
         }
     }
 }

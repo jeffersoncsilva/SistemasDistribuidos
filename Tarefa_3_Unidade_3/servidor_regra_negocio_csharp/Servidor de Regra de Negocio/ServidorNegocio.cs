@@ -30,8 +30,8 @@ namespace Servidor_de_Regra_de_Negocio
             {
                 this.client = socket.Accept();
                 Console.WriteLine("Conectado");
-                //Thread t = new Thread(new ThreadStart(new Connection(this.client, this.ip_bd, this.porta_bd).Run));
-                //t.Start();
+                Thread t = new Thread(new ThreadStart(new Connection(this.client, "127.0.0.1", 12346).Run));
+                t.Start();
             }
         }
     }
